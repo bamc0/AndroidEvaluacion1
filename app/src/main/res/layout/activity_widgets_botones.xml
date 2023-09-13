@@ -15,14 +15,9 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-    <RatingBar
-        android:id="@+id/ratingBar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -43,4 +38,9 @@
             android:text="opcion 3" />
 
     </RadioGroup>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

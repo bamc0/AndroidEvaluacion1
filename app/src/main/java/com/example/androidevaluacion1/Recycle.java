@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Recycle extends AppCompatActivity {
 
-    private RecyclerView rv;
+    private RecyclerView rv1;
     private ItemAdapter itemAdapter;
 
     @Override
@@ -19,14 +19,14 @@ public class Recycle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rv = (RecyclerView) findViewById(R.id.rv);
+        rv1 = (RecyclerView) findViewById(R.id.rv1);
         itemAdapter = new ItemAdapter(this);
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         itemAdapter.setData(getData());
-        rv.setAdapter(itemAdapter);
-        rv.setLayoutManager(linearLayoutManager);
+        rv1.setAdapter(itemAdapter);
+        rv1.setLayoutManager(linearLayoutManager);
     }
 
     private List<Item> getData() {
