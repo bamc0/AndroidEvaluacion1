@@ -22,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chequearPass(View v){
-        if (password.getText().toString().length() == 0){
+        String pass = "1234".toString();
+        if (password.getText().length()>0){
+            Toast.makeText(MainActivity.this, password.getText(), Toast.LENGTH_SHORT).show();
+
+        } else {
             Intent sig = new Intent(this, MainActivity2.class);
             startActivity(sig);
-        } else
-            Toast.makeText(MainActivity.this, password.getText(), Toast.LENGTH_SHORT).show();
-    }
+    }}
 
 
 
