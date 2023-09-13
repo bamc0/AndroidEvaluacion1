@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Recycle extends AppCompatActivity {
 
-    private RecyclerView rv1 = (RecyclerView) findViewById(R.id.rv1);
+    private RecyclerView rv1;
     private ItemAdapter itemAdapter;
 
     @Override
@@ -19,7 +19,7 @@ public class Recycle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        rv1 = (RecyclerView) findViewById(R.id.rv1);
         itemAdapter = new ItemAdapter(this);
 
 
