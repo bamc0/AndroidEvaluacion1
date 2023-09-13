@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AndroidEvaluacion1</string>
+
+    <string-array name="estado">
+        <item>Todos</item>
+        <item>Vigentes</item>
+        <item>Terminados</item>
+        <item>Atrasados</item>
+        <item>Reservados</item>
+    </string-array>
 </resources>

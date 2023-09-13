@@ -48,35 +48,51 @@
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
+        android:entries="@array/estado"
         android:layout_height="wrap_content" />
 
     <CheckBox
         android:id="@+id/cb1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:text="Opción A" />
 
     <CheckBox
         android:id="@+id/cb2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:text="Opción B" />
 
     <CheckBox
         android:id="@+id/cb3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:text="Opción C" />
 
     <Button
         android:id="@+id/btnEnviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="ingresarDatos"
+        android:text="Ingresar Datos" />
 
     <ProgressBar
         android:id="@+id/pb"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="volver"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

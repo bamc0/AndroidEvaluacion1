@@ -2,6 +2,7 @@ package com.example.androidevaluacion1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -34,6 +35,12 @@ public class WidgetsBotones extends AppCompatActivity {
         cb3 = (CheckBox) findViewById(R.id.cb3);
         pb = (ProgressBar) findViewById(R.id.pb);
     }
+    public void ingresarDatos(View v){
+        comprobarRB();
+        cuantasEstrellas();
+        comprobarCB();
+        prog();
+    }
 
     public void comprobarRB(){
         String tipo = "";
@@ -56,7 +63,7 @@ public class WidgetsBotones extends AppCompatActivity {
     }
 
     public void prog(){
-
+        contador = 0;
         final Timer t = new Timer();
         TimerTask tt = new TimerTask() {
             @Override
@@ -86,5 +93,9 @@ public class WidgetsBotones extends AppCompatActivity {
             Toast.makeText(WidgetsBotones.this, etiqueta, Toast.LENGTH_SHORT).show();
         } else
             Toast.makeText(WidgetsBotones.this, "No se seleccionó ningún checkbox", Toast.LENGTH_SHORT).show();
+    }
+    public void volver(View v){
+        Intent ant = new Intent(this, MainActivity2.class);
+        startActivity(ant);
     }
 }
