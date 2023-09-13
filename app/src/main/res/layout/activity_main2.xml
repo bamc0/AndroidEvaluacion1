@@ -46,6 +46,7 @@
                         android:id="@+id/btn1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="ir1"
                         android:text="ir" />
                 </LinearLayout>
 
@@ -73,6 +74,7 @@
                         android:id="@+id/btn2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="ir2"
                         android:text="ir" />
 
                 </LinearLayout>
@@ -88,6 +90,7 @@
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="volver"
                 android:text="Cerrar Sesión" />
         </TableRow>
 

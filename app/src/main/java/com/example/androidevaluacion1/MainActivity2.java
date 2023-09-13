@@ -24,31 +24,20 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
-    public void botones(){
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent next = new Intent(MainActivity2.this, WidgetsBotones.class);
-                startActivity(next);
-            }
-        });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent next = new Intent(MainActivity2.this, Recycle.class);
-                startActivity(next);
-            }
-        });
-
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent ant = new Intent(MainActivity2.this, MainActivity.class);
-                startActivity(ant);
-            }
-        });
+    public void ir1(View v){
+        Intent ir = new Intent(this, WidgetsBotones.class);
+        startActivity(ir);
     }
+    public void ir2(View v){
+        Intent ir = new Intent(this, Recycle.class);
+        startActivity(ir);
+    }
+    public void volver(View v){
+        Intent ir = new Intent(this, MainActivity.class);
+        startActivity(ir);
+    }
+
 
 
 }
