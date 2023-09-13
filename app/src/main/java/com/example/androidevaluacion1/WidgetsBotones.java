@@ -15,15 +15,11 @@ import java.util.TimerTask;
 
 public class WidgetsBotones extends AppCompatActivity {
 
-    private RadioButton rb1;
-    private RadioButton rb2;
-    private RadioButton rb3;
+    private RadioButton rb1, rb2, rb3;
     private RatingBar estrellas;
-    private CheckBox cb1;
-    private CheckBox cb2;
-    private CheckBox cb3;
+    private CheckBox cb1, cb2, cb3;
     private ProgressBar pb;
-    int contador = 0;
+    private int contador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +55,7 @@ public class WidgetsBotones extends AppCompatActivity {
         Toast.makeText(WidgetsBotones.this, "Rating de: "+estrellas.getRating()+" estrellas", Toast.LENGTH_SHORT).show();
     }
 
-    public void prog(View v){
+    public void prog(){
 
         final Timer t = new Timer();
         TimerTask tt = new TimerTask() {
