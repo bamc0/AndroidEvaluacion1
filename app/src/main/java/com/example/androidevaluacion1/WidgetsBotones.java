@@ -3,11 +3,15 @@ package com.example.androidevaluacion1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class WidgetsBotones extends AppCompatActivity {
 
@@ -19,7 +23,7 @@ public class WidgetsBotones extends AppCompatActivity {
     private CheckBox cb2;
     private CheckBox cb3;
     private ProgressBar pb;
-
+    int contador = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,21 @@ public class WidgetsBotones extends AppCompatActivity {
         Toast.makeText(WidgetsBotones.this, "Rating de: "+estrellas.getRating()+" estrellas", Toast.LENGTH_SHORT).show();
     }
 
+    public void prog(View v){
+
+        final Timer t = new Timer();
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                contador++;
+                pb.setProgress(contador);
+
+                if (contador >= 100)
+                    t.cancel();
+            }
+        };
+        t.schedule(tt, 0, 100);
+    }
     public void comprobarCB(){
         String comprobarCB1 = "";
         String comprobarCB2 = "";
