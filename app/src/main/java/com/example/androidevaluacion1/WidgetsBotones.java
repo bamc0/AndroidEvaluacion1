@@ -3,8 +3,8 @@ package com.example.androidevaluacion1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
@@ -18,6 +18,7 @@ public class WidgetsBotones extends AppCompatActivity {
     private CheckBox cb1;
     private CheckBox cb2;
     private CheckBox cb3;
+    private ProgressBar pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class WidgetsBotones extends AppCompatActivity {
         cb1 = (CheckBox) findViewById(R.id.cb1);
         cb2 = (CheckBox) findViewById(R.id.cb2);
         cb3 = (CheckBox) findViewById(R.id.cb3);
-
+        pb = (ProgressBar) findViewById(R.id.pb);
     }
 
     public void comprobarRB(){
@@ -54,4 +55,21 @@ public class WidgetsBotones extends AppCompatActivity {
         Toast.makeText(WidgetsBotones.this, "Rating de: "+estrellas.getRating()+" estrellas", Toast.LENGTH_SHORT).show();
     }
 
+    public void comprobarCB(){
+        String comprobarCB1 = "";
+        String comprobarCB2 = "";
+        String comprobarCB3 = "";
+        String etiqueta;
+        if (cb1.isChecked())
+            comprobarCB1 = cb1.getText().toString()+" ";
+        if (cb2.isChecked())
+            comprobarCB2 = cb2.getText().toString()+" ";
+        if (cb3.isChecked())
+            comprobarCB3 = cb3.getText().toString();
+        if (cb1.isChecked()||cb2.isChecked()||cb3.isChecked()){
+            etiqueta = ("Se seleccionaron los siguientes Checkboxes: "+comprobarCB1+comprobarCB2+comprobarCB3);
+            Toast.makeText(WidgetsBotones.this, etiqueta, Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(WidgetsBotones.this, "No se seleccionó ningún checkbox", Toast.LENGTH_SHORT).show();
+    }
 }
